@@ -1,0 +1,54 @@
+import java.util.Scanner;
+
+public class AQA {
+
+    public static void main(String[] args) {
+       int option =0;
+        do { 
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("\nPlease choose one of the below options:\n* Enter 1 for a number \n* Enter 2 for a name\n* Enter 3 to exit\n");
+            option = scanner.nextInt();
+        if (option == 1){
+            System.out.print("* Enter 1 for a single number \n* Enter 2 for an array of numbers\n");
+            int choice = scanner.nextInt();
+            if (choice == 1){
+                System.out.print("Enter a number: ");
+                int enteredNumber = scanner.nextInt();
+                if (enteredNumber > 7){
+                System.out.print("Hello");
+            }
+        }
+            else if (choice == 2){
+                System.out.print("Enter the size of the array: ");
+                int size = scanner.nextInt();
+                int[] Arraynum = new int[size];
+
+                for (int i = 0; i < size; i++) {
+                    System.out.print("Enter array's element:");
+                    Arraynum[i] = scanner.nextInt();
+                }
+
+                System.out.println("Array elements that are multiples of 3 are:");
+                for (int num : Arraynum) {
+                    if (num % 3 == 0) {
+                        System.out.print(num + " ");
+                    }
+                }
+
+            }
+        }
+        
+        else if (option == 2){
+            
+            System.out.print("Enter a name: ");
+            String enteredName = scanner.next();
+            if ("John".equals(enteredName)) {
+                System.out.println("Hello, John");
+            } else {
+                System.out.println("There is no such name");
+            }
+        }
+    }while(option != 3);
+}
+}
+

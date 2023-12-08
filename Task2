@@ -1,0 +1,4 @@
+The given bracket sequence "[((())()(())]]" is not correct because it contains unmatched brackets.
+Need to fix the mismatched brackets.
+
+Correct bracket should as following: [((())()(()))]
